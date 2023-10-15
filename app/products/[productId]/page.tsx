@@ -16,6 +16,8 @@ export default async function ProductPage({
         const product: IProduct = await fetchProduct(productId);
         return <Product key={productId} product={product} />;
     } catch (err) {
-        return <div>{err as string}</div>
+        return <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+            <span className="font-medium">Network error!</span> {err as string}
+        </div>
     }
 }

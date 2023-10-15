@@ -24,7 +24,7 @@ export async function fetchProduct(productId: number): Promise<IProduct> {
         if (res.ok)
             return res.json();
         return res.json().then((err: ErrorMessage) => Promise.reject(err.message));
-    });
+    }).catch(err => Promise.reject(err.message));
 }
 
 export async function createProduct(product: IProduct): Promise<number> {
