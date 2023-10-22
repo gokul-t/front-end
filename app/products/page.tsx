@@ -3,6 +3,7 @@ import { IPagedList } from '../types/paged-list-interface'
 import Product from './components/product'
 import { fetchProducts } from './products.service'
 import { IProduct } from './types/product-interface'
+import Alert from '../components/alert'
 
 export const metadata: Metadata = {
     title: 'Products',
@@ -22,8 +23,6 @@ export default async function Products() {
             </div>
         </article>);
     } catch (err) {
-        return <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
-            <span className="font-medium">Network error!</span> Server down.
-        </div>
+        return <Alert title="Network Error!" description={err as string} />
     }
 }
