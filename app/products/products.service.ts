@@ -1,5 +1,6 @@
-import { ProductPagedList } from './page';
-import { IProduct } from './types/product-interface';
+import { IProduct, ProductPagedList } from './types/product-interface';
+
+
 
 type ErrorMessage = {
     status: number,

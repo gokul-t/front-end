@@ -1,3 +1,6 @@
+import { IPagedList } from '@/app/types/paged-list-interface'
+
+export type ProductPagedList = IPagedList<IProduct>
 
 export type  Size = "Large" | "Medium" | "Small";
 

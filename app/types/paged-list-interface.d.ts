@@ -1,5 +1,3 @@
-import { Sort } from '../products/page';
-
 export type Sort = { empty: Boolean, sorted: Boolean, unsorted: Boolean }
 
 export interface IPagedList<Type> {
